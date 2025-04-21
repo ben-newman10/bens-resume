@@ -9,16 +9,19 @@
   <meta property="og:title" content="Ben Humphreys-Newman – Technical Director" />
   <meta property="og:description" content="Experienced Technical Director with expertise in DevOps, AWS and cloud-native infrastructure. Proven leader in delivering high-availability solutions and optimising delivery processes." />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://resume.humphreysnewman.co.uk/" />
+  <link rel="canonical" href="https://yourwebsite.com/" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script>
+    function printResume() { window.print(); }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ben Humphreys-Newman",
     "jobTitle": "Technical Director",
-    "url": "https://resume.humphreysnewman.co.uk/",
+    "url": "https://yourwebsite.com/",
     "sameAs": [
       "https://www.linkedin.com/in/ben-humphreys-newman/",
       "https://github.com/ben-newman10"
@@ -31,10 +34,13 @@
     .skip-link:focus { top: 0; }
     body { font-family: 'Roboto', sans-serif; background: #f1f1f1; margin: 0; }
     main.container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px 40px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-    header { text-align: center; margin-bottom: 40px; }
+    header { text-align: center; margin-bottom: 20px; }
     header .profile-pic { width: 150px; border-radius: 50%; margin-bottom: 15px; }
     header h1 { font-size: 2em; margin: 0; color: #333; }
-    header .tagline { font-size: 1.2em; color: #333; margin-top: 5px; margin-bottom: 0; }
+    header .tagline { font-size: 1.2em; color: #333; margin-top: 5px; margin-bottom: 10px; }
+    .print-button { text-align: center; margin-bottom: 20px; }
+    .print-button button { background: #0057B8; color: #fff; border: none; padding: 10px 20px; font-size: 1em; cursor: pointer; border-radius: 4px; }
+    .print-button button:hover { background: #004080; }
     nav { margin-bottom: 20px; }
     nav ul { list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
     nav li { margin: 0 10px; }
@@ -49,6 +55,12 @@
     footer { font-size: 0.9em; text-align: center; margin-top: 40px; color: #555; }
     #contact a { color: #006699; text-decoration: none; }
     #contact a:hover { text-decoration: underline; }
+    @media print {
+      body { background: #fff; }
+      .skip-link, nav, .print-button, footer { display: none !important; }
+      main.container { box-shadow: none; margin: 0; padding: 0; }
+      @page { size: A4; margin: 1cm; }
+    }
   </style>
 </head>
 <body>
@@ -59,6 +71,9 @@
       <h1>Ben Humphreys-Newman</h1>
       <p class="tagline">Technical Director at IBM | DevOps & AWS Specialist</p>
     </header>
+    <div class="print-button">
+      <button type="button" onclick="printResume()" aria-label="Print friendly version of resume">Print Friendly</button>
+    </div>
     <nav aria-label="Section navigation">
       <ul>
         <li><a href="#summary">Summary</a></li>
@@ -86,81 +101,5 @@
         </ul>
       </div>
       <div class="job">
-        <h3>DevOps Engineer, IBM <span class="date">Jul 2019 – Dec 2024</span></h3>
-        <p>In my role as a DevOps Engineer at IBM, I specialised in designing, implementing, and managing robust cloud-native infrastructures, primarily using AWS. I played a key role in automating deployment processes and improving overall delivery speed and reliability.</p>
-        <ul>
-          <li>Built scalable AWS infrastructures (EC2, Lambda, CloudFormation).</li>
-          <li>Implemented and maintained containerised applications with Kubernetes and OpenShift.</li>
-          <li>Developed advanced CI/CD pipelines with Jenkins and GitLab.</li>
-          <li>Monitored system performance and maintained high availability.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>Software Engineer, BT <span class="date">Sep 2013 – Jul 2019</span></h3>
-        <p>As a Software Engineer at BT, I was responsible for refreshing and dockerising a legacy system deployed globally. This involved writing new services in Python and setting them up as microservices. Setup communication between all services using a QPID broker to enable faster and more efficient communications between services. All microservices deployed as docker containers and managed with Rancher.</p>
-        <ul>
-          <li>Wrote services in Python and set them up as microservices.</li>
-          <li>Integrated services using a Qpid message broker to improve communication efficiency.</li>
-          <li>Containerised applications with Docker and managed orchestration through Rancher.</li>
-          <li>Collaborated with cross-functional teams to troubleshoot and optimise system performance.</li>
-        </ul>
-      </div>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <h3>Cloud & DevOps</h3>
-      <ul>
-        <li>DevOps (Docker, Kubernetes, Puppet).</li>
-        <li>AWS Cloud Architecture & Services (EC2, Lambda, CloudFormation, CloudWatch, CodePipeline).</li>
-        <li>Infrastructure as Code (Terraform, CloudFormation).</li>
-      </ul>
-      <h3>Automation & CI/CD</h3>
-      <ul>
-        <li>CI/CD & Automation (Jenkins, GitLab).</li>
-        <li>Containerisation & Orchestration (OpenShift, Rancher).</li>
-      </ul>
-      <h3>Programming & Data</h3>
-      <ul>
-        <li>Python & C++ Software Development.</li>
-        <li>Database Management (MongoDB, SQL).</li>
-        <li>Web Development (Node.js, Vue.js, AngularJS).</li>
-      </ul>
-    </section>
-    <section id="education">
-      <h2>Education</h2>
-      <div class="edu">
-        <h3>Aston University <span class="date">2010 – 2013</span></h3>
-        <p>BSc (Hons) Computer Science, Second Class Honours.</p>
-        <p><strong>Activities and Societies:</strong> Founding member of the Computer Science Society; Social Secretary and Treasurer.</p>
-        <p><strong>Key Modules:</strong></p>
-        <ul>
-          <li>Software Engineering.</li>
-          <li>Java Program Development.</li>
-          <li>Internet Applications.</li>
-          <li>Software Project Management with Agile Techniques and SCRUM.</li>
-          <li>Data Mining.</li>
-        </ul>
-        <p><strong>Final Year Project:</strong> Developed an online system for the School of Engineering to manage final year projects, including advertising potential projects, allocating projects to students, and delivering project grades.</p>
-      </div>
-    </section>
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li><a href="https://www.credly.com/badges/47c4ebe8-278b-4a7b-8d5b-156c5dc021f1/public_url">AWS Certified DevOps Engineer – Professional (2024)</a>.</li>
-        <li><a href="https://www.credly.com/badges/578071ea-18cd-44a7-910c-8d0f69decb25/public_url">Red Hat Certified Specialist in Containers (2024)</a>.</li>
-        <li><a href="https://www.credly.com/badges/2415afa1-75c7-4dd5-965e-8d1ae72ca009/public_url">AWS Certified Solutions Architect – Associate (2022)</a>.</li>
-        <li><a href="https://www.credly.com/badges/99b1bb8a-27a4-49ac-b65e-58bce49bf458/public_url">AWS Certified Cloud Practitioner (2021)</a>.</li>
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><i class="fa fa-envelope"></i> <a href="mailto:ben@humphreysnewman.co.uk">ben@humphreysnewman.co.uk</a></p>
-      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ben-humphreys-newman/">linkedin.com/in/ben-humphreys-newman</a></p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/ben-newman10">github.com/ben-newman10</a></p>
-    </section>
-    <footer role="contentinfo">
-      <p>&copy; <time datetime="2025">2025</time> Ben Humphreys-Newman. All rights reserved.</p>
-    </footer>
-  </main>
-</body>
-</html>
+        <h3>DevOps Engineer, IBM <span class="date">Jul 2019 – Dec 2024
+
