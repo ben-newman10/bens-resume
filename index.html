@@ -30,7 +30,7 @@
   }
   </script>
   <style>
-    .skip-link { position: absolute; top: -40px; left: 0; background: #0057B8; color: #fff; padding: 8px; z-index: 100; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: #0057B8; color: #fff; padding: 8px; z-index: 1000; }
     .skip-link:focus { top: 0; }
     body { font-family: 'Roboto', sans-serif; background: #f1f1f1; margin: 0; }
     main.container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px 40px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
@@ -38,9 +38,10 @@
     header .profile-pic { width: 150px; border-radius: 50%; margin-bottom: 15px; }
     header h1 { font-size: 2em; margin: 0; color: #333; }
     header .tagline { font-size: 1.2em; color: #333; margin-top: 5px; margin-bottom: 10px; }
-    .print-button { text-align: center; margin-bottom: 20px; }
-    .print-button button { background: #0057B8; color: #fff; border: none; padding: 10px 20px; font-size: 1em; cursor: pointer; border-radius: 4px; }
-    .print-button button:hover { background: #004080; }
+    .print-button { text-align: center; margin: 20px 0; }
+    .print-button a { background: #0057B8; color: #fff; padding: 10px 20px; font-size: 1em; text-decoration: none; border-radius: 4px; display: inline-flex; align-items: center; }
+    .print-button a:hover { background: #004080; }
+    .print-button i { margin-right: 8px; }
     nav { margin-bottom: 20px; }
     nav ul { list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
     nav li { margin: 0 10px; }
@@ -57,7 +58,7 @@
     #contact a:hover { text-decoration: underline; }
     @media print {
       body { background: #fff; zoom: 75%; }
-      .skip-link, nav, .print-button, footer { display: none !important; }
+      .skip-link, .print-button, nav, footer { display: none !important; }
       main.container { box-shadow: none; margin: 0; padding: 0; }
       @page { size: A4; margin: 1cm; }
     }
@@ -72,7 +73,7 @@
       <p class="tagline">Technical Director at IBM | DevOps & AWS Specialist</p>
     </header>
     <div class="print-button">
-      <button type="button" onclick="printResume()" aria-label="Print and save as PDF"><i class="fa fa-download" aria-hidden="true"></i> Print & Save as PDF</button>
+      <a href="#" onclick="printResume()" aria-label="Print and save as PDF"><i class="fa fa-download" aria-hidden="true"></i> Print &amp; Save as PDF</a>
     </div>
     <nav aria-label="Section navigation">
       <ul>
