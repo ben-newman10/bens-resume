@@ -97,7 +97,17 @@
       body { background: #fff; zoom: 75%; }
       .skip-link, .print-button, .highlights, nav, footer { display: none !important; }
       main.container { box-shadow: none; margin: 0; padding: 0; }
-      @page { size: A4; margin: 1cm; }
+      @page { size: A4; margin: 0.8cm; }
+
+      /* Tighten vertical spacing for 2-page fit */
+      header { margin-bottom: 10px; }
+      header .profile-pic { width: 100px; margin-bottom: 8px; }
+      section { margin-bottom: 20px; }
+      section h2 { margin-bottom: 10px; }
+      .job { margin-bottom: 12px; }
+      ul li { margin-bottom: 3px; }
+      .skill-pills { gap: 3px; margin-bottom: 10px; }
+      #summary p { padding: 10px 14px; }
     }
   </style>
 </head>
