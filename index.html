@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ben Humphreys-Newman – Technical Director</title>
-  <meta name="description" content="Ben Humphreys-Newman, Technical Director specialising in DevOps and AWS, with 10+ years’ experience delivering secure, cost-efficient cloud solutions and leading high-performing teams." />
+  <meta name="description" content="Ben Humphreys-Newman, Technical Director specialising in DevOps and AWS, with 10+ years' experience delivering secure, cost-efficient cloud solutions and leading high-performing teams." />
   <meta name="keywords" content="Technical Director, DevOps, AWS, Cloud Solutions, Leadership, CI/CD, Infrastructure as Code" />
   <meta property="og:title" content="Ben Humphreys-Newman – Technical Director" />
   <meta property="og:description" content="Experienced Technical Director with expertise in DevOps, AWS and cloud-native infrastructure." />
@@ -30,32 +30,67 @@
   }
   </script>
   <style>
+    /* ── Base ───────────────────────────────────────────── */
     .skip-link { position: absolute; top: -40px; left: 0; background: #0057B8; color: #fff; padding: 8px; z-index: 1000; }
     .skip-link:focus { top: 0; }
-    body { font-family: 'Roboto', sans-serif; background: #f1f1f1; margin: 0; }
+    body { font-family: 'Roboto', sans-serif; background: #f1f1f1; margin: 0; font-size: 15px; line-height: 1.6; }
     main.container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px 40px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+
+    /* ── Header ─────────────────────────────────────────── */
     header { text-align: center; margin-bottom: 20px; }
     header .profile-pic { width: 150px; border-radius: 50%; margin-bottom: 15px; }
     header h1 { font-size: 2em; margin: 0; color: #333; }
-    header .tagline { font-size: 1.2em; color: #333; margin-top: 5px; margin-bottom: 10px; }
+    header .tagline { font-size: 1.2em; color: #555; margin-top: 5px; margin-bottom: 10px; }
+
+    /* ── Highlights bar ─────────────────────────────────── */
+    .highlights { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 12px 0 6px; }
+    .highlights span { background: #0057B8; color: #fff; border-radius: 20px; padding: 5px 14px; font-size: 0.85em; font-weight: 500; }
+
+    /* ── Print button ───────────────────────────────────── */
     .print-button { text-align: center; margin: 20px 0; }
     .print-button a { background: #0057B8; color: #fff; padding: 10px 20px; font-size: 1em; text-decoration: none; border-radius: 4px; display: inline-flex; align-items: center; }
     .print-button a:hover { background: #004080; }
     .print-button i { margin-right: 8px; }
+
+    /* ── Nav ────────────────────────────────────────────── */
     nav { margin-bottom: 20px; }
     nav ul { list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
     nav li { margin: 0 10px; }
     nav a { text-decoration: none; color: #0057B8; }
+
+    /* ── Sections ───────────────────────────────────────── */
     section { margin-bottom: 40px; }
-    section h2 { font-size: 1.5em; border-bottom: 2px solid #0057B8; padding-bottom: 5px; margin-bottom: 20px; color: #333; }
+    section h2 { font-size: 1.5em; border-bottom: 2px solid #0057B8; padding-bottom: 5px; margin-bottom: 20px; color: #0057B8; font-weight: 700; }
     h3 { display: flex; justify-content: space-between; align-items: baseline; font-size: 1.2em; margin: 0 0 5px; color: #333; }
     h3 .date { font-size: 0.9em; color: #555; font-weight: normal; margin-left: 10px; }
+
+    /* ── Summary callout ────────────────────────────────── */
+    #summary p { background: #f0f6ff; border-left: 3px solid #0057B8; padding: 15px 18px; border-radius: 0 4px 4px 0; margin: 0; }
+
+    /* ── Job entries ────────────────────────────────────── */
+    .job { border-left: 3px solid #0057B8; padding-left: 15px; margin-bottom: 30px; }
     .job p, .edu p { margin: 5px 0 10px; color: #333; }
     ul { margin: 5px 0 15px; padding-left: 20px; }
-    ul li { margin-bottom: 5px; color: #333; }
-    footer { font-size: 0.9em; text-align: center; margin-top: 40px; color: #555; }
+    ul li { margin-bottom: 8px; color: #333; }
+
+    /* ── Skill pills ────────────────────────────────────── */
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; padding-left: 0; list-style: none; }
+    .skill-pills li { display: inline-block; background: #e8f0fe; border: 1px solid #0057B8; border-radius: 20px; padding: 4px 12px; margin: 0; color: #0057B8; font-size: 0.9em; }
+
+    /* ── Cert cards ─────────────────────────────────────── */
+    .cert-card { display: flex; align-items: center; background: #f8f9fa; border-left: 4px solid #FF9900; border-radius: 0 4px 4px 0; padding: 10px 14px; margin-bottom: 10px; }
+    .cert-card.rhel { border-left-color: #EE0000; }
+    .cert-card a { color: #0057B8; text-decoration: none; font-weight: 500; }
+    .cert-card a:hover { text-decoration: underline; }
+
+    /* ── Contact ────────────────────────────────────────── */
     #contact a { color: #006699; text-decoration: none; }
     #contact a:hover { text-decoration: underline; }
+
+    /* ── Footer ─────────────────────────────────────────── */
+    footer { font-size: 0.9em; text-align: center; margin-top: 40px; color: #555; }
+
+    /* ── Print ──────────────────────────────────────────── */
     @media print {
       body { background: #fff; zoom: 75%; }
       .skip-link, .print-button, nav, footer { display: none !important; }
@@ -70,7 +105,13 @@
     <header>
       <img src="profile_picture.jpg" alt="Ben Humphreys-Newman portrait" class="profile-pic" />
       <h1>Ben Humphreys-Newman</h1>
-      <p class="tagline">Technical Director at IBM | DevOps & AWS Specialist</p>
+      <p class="tagline">Technical Director – Cloud &amp; AWS at IBM</p>
+      <div class="highlights">
+        <span>10+ Years Experience</span>
+        <span>AWS Certified Professional</span>
+        <span>Multi-team Migration Lead</span>
+        <span>AI Tooling Pioneer</span>
+      </div>
     </header>
     <div class="print-button">
       <a href="#" onclick="printResume()" aria-label="Print and save as PDF"><i class="fa fa-download" aria-hidden="true"></i> Print &amp; Save as PDF</a>
@@ -86,74 +127,104 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
     <section id="summary">
       <h2>Professional Summary</h2>
-      <p><strong>Technical Director at IBM</strong> with 10+ years delivering cloud-native infrastructure at enterprise scale. I set technical direction, advise on resourcing strategy, and lead high-performing engineering teams across complex, regulated environments. Deep hands-on expertise in AWS and DevOps underpins a track record of driving cost efficiency, accelerating delivery velocity, and ensuring resilience across mission-critical systems. I work closely with commercial teams to identify the right technologies, skills, and supplier partnerships that keep delivery profitable and technically excellent.</p>
+      <p><strong>Technical Director – Cloud &amp; AWS at IBM</strong> with 10+ years delivering enterprise-scale cloud infrastructure. I work hands-on alongside engineering teams driving <strong>AWS migrations</strong> across multiple concurrent programmes, while holding strategic oversight of technical direction and commercial alignment. My track record spans driving <strong>cost efficiency</strong>, accelerating <strong>delivery velocity</strong>, and building resilient cloud platforms. I work closely with commercial teams to align the right technologies, skills, and <strong>supplier partnerships</strong> that keep delivery profitable and technically excellent.</p>
     </section>
+
     <section id="employment">
       <h2>Employment History</h2>
+
       <div class="job">
-        <h3>Technical Director, IBM <span class="date">Jan 2025 – Present</span></h3>
-        <p>As Technical Director at IBM, I own the technical strategy and delivery outcomes for multiple engineering teams. I set architectural direction, govern technology investment decisions, and ensure our cloud-native platforms are secure, resilient, and aligned with business objectives.</p>
+        <h3>Technical Director – Cloud &amp; AWS, IBM <span class="date">Jan 2025 – Present</span></h3>
+        <p>Primarily a <strong>hands-on Technical Director</strong>, I work directly alongside engineering teams to design, deliver, and govern <strong>large-scale AWS cloud migrations</strong> across multiple concurrent programmes at IBM. I architect solutions, review infrastructure-as-code, and provide expert technical guidance at the point of delivery — while holding strategic oversight of technical direction, standards, and commercial alignment.</p>
         <ul>
-          <li>Define and own the technical strategy across multiple delivery teams, aligning engineering roadmaps with business goals.</li>
-          <li>Establish engineering standards, architectural patterns, and governance frameworks adopted across teams.</li>
-          <li>Partner closely with commercial teams to advise on resourcing, technology selection, and supplier engagement — ensuring delivery remains profitable and technically sound.</li>
-          <li>Lead delivery transformation programmes, measurably improving deployment frequency and reducing time-to-resolve.</li>
-          <li>Pioneer AI tooling adoption (Claude Code, Gemini, Amazon Bedrock, IBM Project Bob), running active pilots to extend AI-assisted workflows across multiple client deliveries.</li>
-          <li>Serve as the trusted technical authority to senior stakeholders, clients, and commercial teams.</li>
+          <li>Hands-on lead across <strong>multi-team AWS cloud migration programmes</strong> — designing target architectures, authoring and reviewing IaC, and guiding teams through lift-and-shift, re-platform, and re-architect patterns.</li>
+          <li>Work <strong>directly alongside engineers</strong> in the codebase and architecture sessions — not directing from the sidelines, but contributing as the most senior technical voice on the project.</li>
+          <li>Define and own the <strong>technical strategy</strong> across multiple delivery teams, aligning engineering roadmaps with business goals.</li>
+          <li>Establish <strong>engineering standards</strong>, <strong>architectural patterns</strong>, and governance frameworks adopted across teams.</li>
+          <li><strong>Partner closely with commercial teams</strong> to advise on <strong>resourcing</strong>, <strong>technology selection</strong>, and <strong>supplier engagement</strong> — ensuring delivery remains profitable and technically sound.</li>
+          <li>Lead <strong>delivery transformation programmes</strong>, measurably improving <strong>deployment frequency</strong> and reducing <strong>time-to-resolve</strong>.</li>
+          <li>Pioneer <strong>AI tooling adoption</strong> (<strong>Claude Code</strong>, <strong>Gemini</strong>, <strong>Amazon Bedrock</strong>, <strong>IBM Project Bob</strong>), running active pilots to extend AI-assisted workflows across multiple client deliveries.</li>
+          <li>Serve as the trusted <strong>technical authority</strong> to senior stakeholders, clients, and commercial teams.</li>
         </ul>
       </div>
+
       <div class="job">
         <h3>DevOps Engineer, IBM <span class="date">Jul 2019 – Dec 2024</span></h3>
         <p>As a Senior DevOps Engineer at IBM, I designed and operated cloud-native AWS infrastructure for enterprise-scale systems, with a focus on automation, reliability, and secure delivery.</p>
         <ul>
-          <li>Architected and operated scalable AWS environments using EC2, Lambda, CloudFormation, and CloudWatch across multiple production workloads.</li>
-          <li>Drove adoption of containerised workloads with Kubernetes and OpenShift, improving deployment consistency and portability.</li>
-          <li>Built end-to-end CI/CD pipelines with Jenkins and GitLab, significantly reducing release cycle time and manual toil.</li>
-          <li>Established monitoring and observability practices to maintain high availability across critical services.</li>
+          <li>Architected and operated scalable <strong>AWS environments</strong> (<strong>EC2</strong>, <strong>Lambda</strong>, <strong>CloudFormation</strong>, <strong>CloudWatch</strong>) across multiple production workloads.</li>
+          <li>Drove adoption of <strong>containerised workloads</strong> with <strong>Kubernetes</strong> and <strong>OpenShift</strong>, improving deployment consistency and portability.</li>
+          <li>Built end-to-end <strong>CI/CD pipelines</strong> with <strong>Jenkins</strong> and <strong>GitLab</strong>, significantly reducing release cycle time and manual toil.</li>
+          <li>Established <strong>monitoring and observability</strong> practices to maintain high availability across critical services.</li>
         </ul>
       </div>
+
       <div class="job">
         <h3>Software Engineer, BT <span class="date">Sep 2013 – Jul 2019</span></h3>
-        <p>As a Software Engineer at BT, I was responsible for refreshing and dockerising a legacy system deployed globally. This involved writing new services in Python and setting them up as microservices. Setup communication between all services using a QPID broker to enable faster and more efficient communications between services. All microservices deployed as docker containers and managed with Rancher.</p>
+        <p>As a Software Engineer at BT, I was responsible for refreshing and dockerising a legacy system deployed globally — writing new services in <strong>Python</strong> and setting them up as <strong>microservices</strong>, with inter-service communication via a <strong>Qpid message broker</strong> and orchestration through <strong>Docker</strong> and Rancher.</p>
         <ul>
-          <li>Wrote services in Python and set them up as microservices.</li>
-          <li>Integrated services using a Qpid message broker to improve communication efficiency.</li>
-          <li>Containerised applications with Docker and managed orchestration through Rancher.</li>
+          <li>Wrote services in <strong>Python</strong> and set them up as <strong>microservices</strong>.</li>
+          <li>Integrated services using a <strong>Qpid message broker</strong> to improve communication efficiency.</li>
+          <li>Containerised applications with <strong>Docker</strong> and managed orchestration through Rancher.</li>
           <li>Collaborated with cross-functional teams to troubleshoot and optimise system performance.</li>
         </ul>
       </div>
     </section>
+
     <section id="skills">
       <h2>Skills</h2>
-      <h3>Cloud & Infrastructure</h3>
-      <ul>
-        <li>AWS Cloud Architecture &amp; Services (EC2, Lambda, CloudFormation, CloudWatch, CodePipeline, CDK).</li>
-        <li>Infrastructure as Code (Terraform, CloudFormation, CDK).</li>
-        <li>Containerisation &amp; Orchestration (Kubernetes, OpenShift, Docker).</li>
+
+      <h3>Cloud &amp; Infrastructure</h3>
+      <ul class="skill-pills">
+        <li>AWS Cloud Architecture</li>
+        <li>EC2</li>
+        <li>Lambda</li>
+        <li>CloudFormation</li>
+        <li>CloudWatch</li>
+        <li>CDK</li>
+        <li>CodePipeline</li>
+        <li>Terraform</li>
+        <li>Kubernetes</li>
+        <li>OpenShift</li>
+        <li>Docker</li>
       </ul>
-      <h3>Automation & DevOps</h3>
-      <ul>
-        <li>CI/CD Pipelines (Jenkins, GitLab CI, GitHub Actions).</li>
-        <li>Observability &amp; Monitoring (CloudWatch, Grafana, Datadog).</li>
-        <li>Security &amp; Compliance (DevSecOps, policy-as-code, SOC2/ISO27001 environments).</li>
+
+      <h3>Automation &amp; DevOps</h3>
+      <ul class="skill-pills">
+        <li>Jenkins</li>
+        <li>GitLab CI</li>
+        <li>GitHub Actions</li>
+        <li>Grafana</li>
+        <li>Datadog</li>
+        <li>DevSecOps</li>
+        <li>Policy-as-Code</li>
+        <li>SOC2 / ISO27001</li>
       </ul>
-      <h3>AI & Emerging Technology</h3>
-      <ul>
-        <li>Hands-on experience with AI coding and productivity tools (Claude Code, Gemini, Amazon Bedrock).</li>
-        <li>Piloting IBM-internal AI tooling (Project Bob) to improve delivery processes.</li>
-        <li>Running active pilots to expand AI tooling adoption across multiple client deliveries.</li>
-        <li>AI-assisted DevOps automation and developer workflow optimisation.</li>
+
+      <h3>AI &amp; Emerging Technology</h3>
+      <ul class="skill-pills">
+        <li>Claude Code</li>
+        <li>Amazon Bedrock</li>
+        <li>Gemini</li>
+        <li>IBM Project Bob</li>
+        <li>AI-assisted DevOps</li>
+        <li>Developer Workflow Automation</li>
       </ul>
-      <h3>Leadership & Delivery</h3>
-      <ul>
-        <li>Technical strategy and architecture governance.</li>
-        <li>Engineering team leadership and mentoring.</li>
-        <li>Stakeholder management and executive communication.</li>
-        <li>Agile/SAFe delivery at scale.</li>
+
+      <h3>Leadership &amp; Delivery</h3>
+      <ul class="skill-pills">
+        <li>Technical Strategy</li>
+        <li>Architecture Governance</li>
+        <li>Team Leadership</li>
+        <li>Stakeholder Management</li>
+        <li>Agile / SAFe</li>
+        <li>Executive Communication</li>
       </ul>
     </section>
+
     <section id="focus">
       <h2>Current Areas of Focus</h2>
       <ul>
@@ -163,38 +234,40 @@
         <li>DevSecOps and supply chain security in regulated environments.</li>
       </ul>
     </section>
+
     <section id="education">
       <h2>Education</h2>
       <div class="edu">
         <h3>Aston University <span class="date">2010 – 2013</span></h3>
         <p>BSc (Hons) Computer Science, Second Class Honours.</p>
-        <p><strong>Activities and Societies:</strong> Founding member of the Computer Science Society; Social Secretary and Treasurer.</p>
-        <p><strong>Key Modules:</strong></p>
-        <ul>
-          <li>Software Engineering.</li>
-          <li>Java Program Development.</li>
-          <li>Internet Applications.</li>
-          <li>Software Project Management with Agile Techniques and SCRUM.</li>
-          <li>Data Mining.</li>
-        </ul>
         <p><strong>Final Year Project:</strong> Developed an online system for the School of Engineering to manage final year projects, including advertising potential projects, allocating projects to students, and delivering project grades.</p>
+        <p>Founding member of the Aston Computer Science Society.</p>
       </div>
     </section>
+
     <section id="certifications">
       <h2>Certifications</h2>
-      <ul>
-        <li><a href="https://www.credly.com/badges/47c4ebe8-278b-4a7b-8d5b-156c5dc021f1/public_url">AWS Certified DevOps Engineer – Professional (2024)</a>.</li>
-        <li><a href="https://www.credly.com/badges/578071ea-18cd-44a7-910c-8d0f69decb25/public_url">Red Hat Certified Specialist in Containers (2024)</a>.</li>
-        <li><a href="https://www.credly.com/badges/2415afa1-75c7-4dd5-965e-8d1ae72ca009/public_url">AWS Certified Solutions Architect – Associate (2022)</a>.</li>
-        <li><a href="https://www.credly.com/badges/99b1bb8a-27a4-49ac-b65e-58bce49bf458/public_url">AWS Certified Cloud Practitioner (2021)</a>.</li>
-      </ul>
+      <div class="cert-card">
+        <a href="https://www.credly.com/badges/47c4ebe8-278b-4a7b-8d5b-156c5dc021f1/public_url">AWS Certified DevOps Engineer – Professional (2024)</a>
+      </div>
+      <div class="cert-card rhel">
+        <a href="https://www.credly.com/badges/578071ea-18cd-44a7-910c-8d0f69decb25/public_url">Red Hat Certified Specialist in Containers (2024)</a>
+      </div>
+      <div class="cert-card">
+        <a href="https://www.credly.com/badges/2415afa1-75c7-4dd5-965e-8d1ae72ca009/public_url">AWS Certified Solutions Architect – Associate (2022)</a>
+      </div>
+      <div class="cert-card">
+        <a href="https://www.credly.com/badges/99b1bb8a-27a4-49ac-b65e-58bce49bf458/public_url">AWS Certified Cloud Practitioner (2021)</a>
+      </div>
     </section>
+
     <section id="contact">
       <h2>Contact</h2>
       <p><i class="fa fa-envelope"></i> <a href="mailto:ben@humphreysnewman.co.uk">ben@humphreysnewman.co.uk</a></p>
       <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ben-humphreys-newman/">linkedin.com/in/ben-humphreys-newman</a></p>
       <p><i class="fab fa-github"></i> <a href="https://github.com/ben-newman10">github.com/ben-newman10</a></p>
     </section>
+
     <footer role="contentinfo">
       <p>&copy; <time datetime="2026">2026</time> Ben Humphreys-Newman. All rights reserved.</p>
     </footer>
